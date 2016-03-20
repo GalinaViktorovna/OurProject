@@ -18,11 +18,8 @@ public class Client {
     @Column (name = "firstName")
     private String firstName;
 
-    @Column (name = "name")
-    private String name;
-
-    @Column (name = "middleName")
-    private String middleName;
+    @Column (name = "lastName")
+    private String lastName;
 
     @Column ( name = "means")
     private double means;
@@ -43,20 +40,14 @@ public class Client {
         this.firstName = firstName;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getMiddleName() {
-        return middleName;
+        return lastName;
     }
 
     public void setMiddleName(String middleName) {
-        this.middleName = middleName;
+        this.lastName = middleName;
     }
 
     public double getMeans() {
