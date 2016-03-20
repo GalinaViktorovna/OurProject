@@ -4,7 +4,7 @@ import Table.Client;
 
 import java.sql.SQLException;
 
-public interface clientDao {
+public interface ClientDao {
     public void addClient(Client client)throws SQLException;
     public void deleteAuthor(Client client)throws SQLException;
     public Client getAuthor(int id)throws SQLException;

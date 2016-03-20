@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class Client {
     @Id
     @Column (name = "numberPhone")
-    private int phoneNumber;
+    private long phoneNumber;
 
     @Column (name = "firstName")
     private String firstName;
@@ -24,11 +24,11 @@ public class Client {
     @Column ( name = "means")
     private double means;
 
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
