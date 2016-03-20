@@ -11,7 +11,7 @@ public class Project {
         ClientDaoImpl dao =  new ClientDaoImpl();
 
         Client au = new Client();
-        au.setFirstName("Васян");
+        au.setFirstName("Васянн");
         au.setPhoneNumber(380668796845L);
         au.setLastName("Иванов");
         au.setMeans(200);
