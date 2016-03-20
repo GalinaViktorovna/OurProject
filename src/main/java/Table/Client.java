@@ -42,11 +42,11 @@ public class Client {
 
 
 
-    public String getMiddleName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setMiddleName(String middleName) {
+    public void setLastName(String middleName) {
         this.lastName = middleName;
     }
 

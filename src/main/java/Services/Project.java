@@ -1,29 +1,23 @@
 package Services;
 
 import Table.Client;
-import Util.HibernateUtil;
-import dao.ClientDao;
-import org.hibernate.Session;
+import dao.ClientDaoImpl;
 
 /**
  * Created by Admin on 20.03.2016.
  */
 public class Project {
     public static void main(String[] args) throws Exception {
-        Factory factory = Factory.getInstance();
-         ClientDao clientDao =  factory.getClientDao();
-         Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
+        ClientDaoImpl dao =  new ClientDaoImpl();
+
         Client au = new Client();
-
-
         au.setFirstName("Васян");
         au.setPhoneNumber(380668796845L);
+        au.setLastName("Иванов");
+        au.setMeans(200);
+        dao.addClient(au);
 
 
-        session.save(au);
-        session.getTransaction().commit();
-        session.close();
 
     }
 

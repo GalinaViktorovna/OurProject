@@ -14,7 +14,7 @@ public class ClientDaoImpl implements ClientDao {
     public void addClient(Client client) throws SQLException {
         Session session =null;
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getSessionFactory().getCurrentSession();
             session.beginTransaction();
             session.save(client);
             session.getTransaction().commit();
