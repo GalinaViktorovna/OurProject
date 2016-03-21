@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "Client")
 public class Client {
     @Id
-    @Column (name = "numberPhone")
+
     private long phoneNumber;
 
     @Column (name = "firstName")
