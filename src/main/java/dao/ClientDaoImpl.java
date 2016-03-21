@@ -5,6 +5,7 @@ import Util.HibernateUtil;
 import org.hibernate.Session;
 
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by Admin on 20.03.2016.
@@ -84,5 +85,27 @@ public class ClientDaoImpl implements ClientDao {
         return result;
 
 
+    }
+
+    @Override
+    public List<Client> getClients() throws SQLException {
+        {
+            List<Client> clients = null;
+            Session session = null;
+            try {
+                session = HibernateUtil.getSessionFactory().openSession();
+                clients = session.createCriteria(Client.class).list();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if ((session != null) && (session.isOpen()))
+
+                    session.close();
+
+            }
+
+            return clients;
+        }
     }
 }

@@ -12,6 +12,9 @@ import javax.persistence.Table;
 @Table(name = "Client")
 public class Client {
     @Id
+private Long id;
+
+
 
     private long phoneNumber;
 
@@ -39,7 +42,13 @@ public class Client {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
 
     public String getLastName() {

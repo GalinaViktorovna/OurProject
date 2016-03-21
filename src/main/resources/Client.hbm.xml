@@ -3,9 +3,10 @@
 <!DOCTYPE hibernate-mapping PUBLIC  "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="Table.Client" table="Client">
-        <id name="phoneNumber" column="phone_number" type="java.lang.Long">
+        <id name="id" column="Id" type="java.lang.Long">
             <generator class="native"/>
         </id>
+        <property name="phoneNumber" column="phoneNumber" type="java.lang.Long"/>
         <property name="firstName" column="first_name" type="java.lang.String"/>
         <property name="lastName" column="last_name" type="java.lang.String"/>
         <property name="means" column="means" type="java.lang.Double"/>

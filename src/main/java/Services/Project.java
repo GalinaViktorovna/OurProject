@@ -4,6 +4,8 @@ import Table.Client;
 import dao.ClientDao;
 import dao.ClientDaoImpl;
 
+import java.util.List;
+
 /**
  * Created by Admin on 20.03.2016.
  */
@@ -15,20 +17,23 @@ public class Project {
 
 
         Client client = new Client();
-        client.setPhoneNumber(254645645654L);
-        client.setLastName("dfh");
-        client.setFirstName("g");
-        client.setMeans(1232323L);
+        client.setPhoneNumber(64556754L);
+        client.setLastName("Галя");
+        client.setFirstName("Самолетова");
+        client.setMeans(123567L);
         dao.addClient(client);
 
-       /* Client au = new Client();
-        au.setFirstName("Васянн");
-        au.setPhoneNumber(380668796845L);
-        au.setLastName("Иванов");
-        au.setMeans(200);
-        dao.addClient(au);*/
+
+  List<Client> clients= cl.getClients();
+        System.out.println("id  isdn title description");
+        for (Client clien : clients){
+    //if(client.getId()==6)bookDao.deleteBook(boo);
 
 
+            System.out.println( clien.getId() +" "+clien.getPhoneNumber()+" "+ clien.getFirstName()+"  "+
+                    clien.getLastName()+"  " +clien.getMeans());
+
+        }
 
     }
 
