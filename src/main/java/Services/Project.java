@@ -1,6 +1,7 @@
 package Services;
 
 import Table.Client;
+import Util.HibernateUtil;
 import dao.ClientDao;
 import dao.ClientDaoImpl;
 
@@ -19,7 +20,7 @@ public class Project {
         Client client = new Client();
         client.setPhoneNumber(5656565656L);
         client.setLastName("Галя");
-        client.setFirstName("Самолетова");
+        client.setFirstName("Самосвалова");
         client.setMeans(123567L);
         dao.addClient(client);
 
@@ -34,7 +35,7 @@ public class Project {
                     clien.getLastName()+"  " +clien.getMeans());
 
         }
-
+        HibernateUtil.closeSessionFactory();
     }
 
 }
