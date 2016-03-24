@@ -29,7 +29,7 @@ public class ClientDaoImpl implements ClientDao {
         }
     }
 @Override
-    public void deleteAuthor(Client client) throws SQLException {
+    public void deleteClient(Client client) throws SQLException {
         Session session = null;
         try {
             session =HibernateUtil.getSessionFactory().openSession();
@@ -47,7 +47,7 @@ public class ClientDaoImpl implements ClientDao {
 
     }
     @Override
-    public Client getAuthor(int id) throws SQLException {
+    public Client getClient(int id) throws SQLException {
 
             Client result = null;
             Session session = null;
@@ -68,7 +68,7 @@ public class ClientDaoImpl implements ClientDao {
 
     }
     @Override
-    public Client getAuthor(String lastName) throws SQLException {
+    public Client getClient(String lastName) throws SQLException {
         Client result = null;
         Session session = null;
         try {

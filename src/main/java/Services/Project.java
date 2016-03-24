@@ -17,7 +17,7 @@ public class Project {
 
 
         Client client = new Client();
-        client.setPhoneNumber(64556754L);
+        client.setPhoneNumber(5656565656L);
         client.setLastName("Галя");
         client.setFirstName("Самолетова");
         client.setMeans(123567L);
